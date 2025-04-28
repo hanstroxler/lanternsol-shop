@@ -1,0 +1,5 @@
+/* custom Vita Luxe CSS */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+}
