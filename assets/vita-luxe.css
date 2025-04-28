@@ -86,3 +86,11 @@
   text-decoration: none;
   color: var(--barbie-pink);
 }
+
+.site-header summary.list-menu__item {
+  padding-right: 6rem;
+}
+
+.site-header .header__menu-item .icon-caret {
+  right: 4rem;
+}
