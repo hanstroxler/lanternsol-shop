@@ -1,24 +1,36 @@
 <!-- Vita Luxe custom hero -->
-
-<div class="page-width">
+<div class="page-width" {{ section.shopify_attributes }}>
   <div class="vitaluxe-hero-content">
-    {% if section.blocks.hero_text_image != 'blank' %}
-      <img height="" width="" src="{{ section.block.hero_text_image | asset_url }}" alt="">
-    {% endif %}
+    {% for block in section.blocks %}
+      {% case block.type %}
+          <!-- hero text image -->
+        {% when 'hero_text_image' %}
+          {% if block.settings.hero_text_image1 != 'blank' %}
+            <div {{ block.shopify_attributes }}>
+              <img
+                height=""
+                width=""
+                src="{{ block.settings.hero_text_image1 | asset_url: "master" }}"
+                alt="VitaLuxe Vitamins"
+              >
+            </div>
+          {% endif %}
+      {% endcase %}
+    {% endfor %}
   </div>
 </div>
 
 {% schema %}
 {
   "name": "VitaLuxe hero",
-  "class": "vitalux-hero-section",
   "tag": "section",
+  "class": "vitaluxe-hero",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "auto_rotate",
-      "label": "t:sections.announcement-bar.settings.auto_rotate.label",
-      "default": false
+      "type": "color",
+      "id": "hero_background_color",
+      "label": "Hero background color",
+      "default": "#1e1e1e"
     }
   ],
   "blocks": [
@@ -28,41 +40,18 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "hero_text_image",
+          "id": "hero_text_image1",
           "label": "Hero text image"
         }
       ]
-    },
-    {
-      "type": "hero_button",
-      "name": "Hero button",
-      "settings": [{}]
-    },
-    {
-      "type": "hero_product_image",
-      "name": "Hero product image",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "hero_product_image",
-          "label": "Hero product image"
-        }
-      ]
-    },
-    {
-      "type": "hero_product_benefits",
-      "name": "Hero product benefits",
-      "settings": [{}]
     }
   ],
   "presets": [
     {
-      "name": "VitaLuxe Hero",
-      "blocks": [
-        {
-          "type": "hero_text_image"
-        }
-      ]
+      "name": "VitaLuxe hero",
+      "settings": {
+        "hero_background_color": "#1e1e1e"
+      }
     }
   ]
 }
