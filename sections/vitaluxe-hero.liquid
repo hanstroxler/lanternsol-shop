@@ -12,27 +12,76 @@
 <div class="page-width">
   <div class="vitaluxe-hero-content">
     <div class="vitaluxe-hero-content-block">
-      <img height="500" width="500" src="{{ 'hero-text.png' | asset_url }}" alt="x" loading="lazy">
-      <br>
-      <img src="{{ 'hero-text.png' | image_url }}" alt="xx">
-      <br>
-      <img src="{{ 'image-name.jpg' | asset_img_url: '300' }}" alt="xx">
+      <img height="500" width="500" src="{{ 'hero-text.png' | asset_url }}" alt="">
+    </div>
+
+    <div class="vitaluxe-hero-content-block">
+      <img height="500" width="500" src="{{ 'hero-products.png' | asset_url }}" alt="">
     </div>
 
     {% for block in section.blocks %}
       {% case block.type %}
           <!-- hero text image -->
         {% when 'hero_text_image' %}
-          {% if block.settings.hero_text_image1 != blank %}
-            <div {{ block.shopify_attributes }}>
+          {% if block.settings.hero_text_image != blank %}
+            <div class="vitaluxe-hero-content-block" {{ block.shopify_attributes }}>
               <img
                 height=""
                 width=""
-                src="{{ block.settings.hero_text_image1 | image_url }}"
+                src="{{ block.settings.hero_text_image | image_url }}"
                 alt="VitaLuxe Vitamins"
               >
             </div>
           {% endif %}
+
+        {% when 'hero_product_image' %}
+          {% if block.settings.hero_product_image != blank %}
+            <div class="vitaluxe-hero-content-block" {{ block.shopify_attributes }}>
+              <img
+                height=""
+                width=""
+                src="{{ block.settings.hero_product_image | image_url }}"
+                alt="VitaLuxe Vitamins"
+              >
+            </div>
+          {% endif %}
+
+        {%- when 'button' -%}
+          <div class="vitaluxe-hero-content-block">
+            <div
+              class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {%- if block.settings.button_label != blank -%}
+                <a
+                  {% if block.settings.button_link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label | escape -}}
+                </a>
+              {%- endif -%}
+              {%- if block.settings.button_label_2 != blank -%}
+                <a
+                  {% if block.settings.button_link_2 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_2 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label_2 | escape -}}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
       {% endcase %}
     {% endfor %}
   </div>
@@ -58,8 +107,69 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "hero_text_image1",
+          "id": "hero_text_image",
           "label": "Hero text image"
+        }
+      ]
+    },
+    {
+      "type": "hero_product_image",
+      "name": "Hero product image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hero_product_image",
+          "label": "Hero product image"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.rich-text.blocks.buttons.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:sections.rich-text.blocks.buttons.settings.header_button1.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.rich-text.blocks.buttons.settings.button_label_1.default",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.rich-text.blocks.buttons.settings.header_button2.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
     }
