@@ -4,7 +4,7 @@
     padding: 5rem 0;
 
     {% if section.settings.hero_background_color != blank %}
-      background: {{ section.settings.hero_background_color }};
+      /* background: {{ section.settings.hero_background_color }}; */
     {% endif %}
   }
 {%- endstyle -%}
@@ -12,11 +12,11 @@
 <div class="page-width">
   <div class="vitaluxe-hero-content">
     <div class="vitaluxe-hero-content-block">
-      <img height="500" width="500" src="{{ 'hero-text.png' | asset_url }}" alt="">
-    </div>
-
-    <div class="vitaluxe-hero-content-block">
-      <img height="500" width="500" src="{{ 'hero-products.png' | asset_url }}" alt="">
+      <img height="500" width="500" src="{{ 'hero-text.png' | asset_url }}" alt="x" loading="lazy">
+      <br>
+      <img src="{{ 'hero-text.png' | image_url }}" alt="xx">
+      <br>
+      <img src="{{ 'image-name.jpg' | asset_img_url: '300' }}" alt="xx">
     </div>
 
     {% for block in section.blocks %}
