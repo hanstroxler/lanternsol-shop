@@ -17,6 +17,7 @@
   min-width: 15rem;
   text-transform: uppercase;
   background: var(--barbie-pink);
+  color: var(--white);
   font-weight: 500;
   font-size: 18px;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -43,8 +44,8 @@
 .button:hover,
 .shopify-challenge__button:hover,
 .customer button:hover {
-  background-color: var(--white);
-  color: var(--deep-charcoal);
+  color: var(--white);
+  background-color: var(--deep-charcoal);
 }
 
 /* header */
@@ -136,13 +137,14 @@
 /* vitalux hero */
 .vitaluxe-hero {
   overflow: hidden;
+  position: relative;
 }
 
 .hero-sand-bg {
   position: absolute;
-  left: 26%;
-  top: 50%;
-  height: 77%;
+  left: 21%;
+  top: 57%;
+  height: 120%;
   width: AUTO;
   transform: translateY(-50%);
 }
@@ -167,4 +169,45 @@
 
 .vitaluxe-hero-content-block img {
   width: 100%;
+}
+
+.vitaluxe-hero .button:hover {
+  background-color: var(--white);
+  color: var(--deep-charcoal);
+}
+
+/* index featured products */
+.index-page .product-grid {
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.index-page .product-grid .grid__item {
+  max-width: 32rem;
+}
+
+.index-page .product-grid .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-page .quick-add__submit {
+  max-width: 16rem;
+  display: inline-block;
+  min-width: 16rem;
+}
+
+.index-page .product-grid .full-unstyled-link {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.index-page .card-information {
+  text-align: center;
+  color: #292126;
 }
