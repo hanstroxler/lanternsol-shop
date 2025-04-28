@@ -9,6 +9,44 @@
   --deep-charcoal: #1e1e1e;
 }
 
+/* button */
+.button,
+.shopify-challenge__button,
+.customer button {
+  height: 5rem;
+  min-width: 15rem;
+  text-transform: uppercase;
+  background: var(--barbie-pink);
+  font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.button:not([disabled]):hover::after,
+.shopify-challenge__button:hover::after,
+.customer button:hover::after,
+.shopify-payment-button__button--unbranded:hover::after {
+  box-shadow: none;
+}
+
+.button:before,
+.shopify-challenge__button:before,
+.customer button:before,
+.shopify-payment-button__button--unbranded:before,
+.button:after,
+.shopify-challenge__button:after,
+.customer button:after,
+.shopify-payment-button__button--unbranded:after {
+  box-shadow: none;
+}
+
+.button:hover,
+.shopify-challenge__button:hover,
+.customer button:hover {
+  background-color: var(--white);
+  color: var(--deep-charcoal);
+}
+
 /* header */
 .site-header-outer {
   padding: 5rem 0;
@@ -96,6 +134,24 @@
 }
 
 /* vitalux hero */
+.vitaluxe-hero {
+  overflow: hidden;
+}
+
+.hero-sand-bg {
+  position: absolute;
+  left: 26%;
+  top: 50%;
+  height: 77%;
+  width: AUTO;
+  transform: translateY(-50%);
+}
+
+.vitaluxe-hero .page-width {
+  z-index: 1;
+  position: relative;
+}
+
 .vitaluxe-hero-content {
   display: flex;
   flex-direction: column;
