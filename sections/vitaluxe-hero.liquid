@@ -1,16 +1,36 @@
 <!-- Vita Luxe custom hero -->
-<div class="page-width" {{ section.shopify_attributes }}>
+{%- style -%}
+  .vitaluxe-hero{
+    padding: 5rem 0;
+
+    {% if section.settings.hero_background_color != blank %}
+      background: {{ section.settings.hero_background_color }};
+    {% endif %}
+  }
+{%- endstyle -%}
+
+<div class="page-width">
   <div class="vitaluxe-hero-content">
+    <div class="vitaluxe-hero-content-block">
+      <img src="{{ 'hero-text.png' | asset_url }}" alt="">
+      <img src="{{ 'hero-text.png' | image_url }}" alt="">
+    </div>
+
+    <div class="vitaluxe-hero-content-block">
+      <img src="{{ 'hero-products.png' | asset_url }}" alt="">
+      <img src="{{ 'hero-products.png' | image_url }}" alt="">
+    </div>
+
     {% for block in section.blocks %}
       {% case block.type %}
           <!-- hero text image -->
         {% when 'hero_text_image' %}
-          {% if block.settings.hero_text_image1 != 'blank' %}
+          {% if block.settings.hero_text_image1 != blank %}
             <div {{ block.shopify_attributes }}>
               <img
                 height=""
                 width=""
-                src="{{ block.settings.hero_text_image1 | asset_url: "master" }}"
+                src="{{ block.settings.hero_text_image1 | image_url }}"
                 alt="VitaLuxe Vitamins"
               >
             </div>
@@ -48,10 +68,7 @@
   ],
   "presets": [
     {
-      "name": "VitaLuxe hero",
-      "settings": {
-        "hero_background_color": "#1e1e1e"
-      }
+      "name": "VitaLuxe hero"
     }
   ]
 }
