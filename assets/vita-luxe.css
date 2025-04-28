@@ -14,7 +14,7 @@
 .shopify-challenge__button,
 .customer button {
   height: 5rem;
-  min-width: 15rem;
+  min-width: 16rem;
   text-transform: uppercase;
   background: var(--barbie-pink);
   color: var(--white);
@@ -210,4 +210,16 @@
 .index-page .card-information {
   text-align: center;
   color: #292126;
+}
+
+.index-page .price .price-item {
+  font-size: 2rem;
+}
+
+.index-page .card__content {
+  text-align: center;
+}
+
+.index-page .collection__view-all {
+  margin-top: 8rem;
 }
