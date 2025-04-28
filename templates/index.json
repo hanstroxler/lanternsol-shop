@@ -11,6 +11,36 @@
   "sections": {
     "vitaluxe_hero_i6n4dU": {
       "type": "vitaluxe-hero",
+      "blocks": {
+        "hero_text_image_V4KJhR": {
+          "type": "hero_text_image",
+          "settings": {
+            "hero_text_image": "shopify://shop_images/hero-text.png"
+          }
+        },
+        "button_aic7wN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "hero_product_image_PEMYA8": {
+          "type": "hero_product_image",
+          "settings": {
+            "hero_product_image": "shopify://shop_images/hero-product.png"
+          }
+        }
+      },
+      "block_order": [
+        "hero_text_image_V4KJhR",
+        "button_aic7wN",
+        "hero_product_image_PEMYA8"
+      ],
       "name": "VitaLuxe hero",
       "settings": {
         "hero_background_color": "#1e1e1e"
