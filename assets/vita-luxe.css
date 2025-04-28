@@ -150,7 +150,6 @@
 }
 
 .vitaluxe-hero .page-width {
-  z-index: 1;
   position: relative;
 }
 
@@ -161,6 +160,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 8rem;
+  z-index: 1;
+  position: relative;
 }
 
 .vitaluxe-hero-content-block {
