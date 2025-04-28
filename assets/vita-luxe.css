@@ -94,3 +94,21 @@
 .site-header .header__menu-item .icon-caret {
   right: 4rem;
 }
+
+/* vitalux hero */
+.vitaluxe-hero-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+.vitaluxe-hero-content-block {
+  max-width: 80%;
+}
+
+.vitaluxe-hero-content-block img {
+  width: 100%;
+}

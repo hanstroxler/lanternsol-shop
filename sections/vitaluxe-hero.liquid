@@ -7,6 +7,10 @@
       background: {{ section.settings.hero_background_color }};
     {% endif %}
   }
+
+  .vitalux-hero-content{
+    background: url({{'sand-bg.png'| asset_url}}) 50% 50% no-repeat;
+  }
 {%- endstyle -%}
 
 <div class="page-width">
@@ -22,6 +26,7 @@
                 width=""
                 src="{{ block.settings.hero_text_image | image_url }}"
                 alt="VitaLuxe Vitamins"
+                loading="lazy"
               >
             </div>
           {% endif %}
@@ -34,6 +39,7 @@
                 width=""
                 src="{{ block.settings.hero_product_image | image_url }}"
                 alt="VitaLuxe Vitamins"
+                loading="lazy"
               >
             </div>
           {% endif %}
