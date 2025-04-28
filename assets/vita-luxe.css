@@ -1,5 +1,88 @@
 /* custom Vita Luxe CSS */
+
+/* color variables */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --lightgrey: #ebebeb;
+  --barbie-pink: #e9128a;
+  --deep-charcoal: #1e1e1e;
+}
+
+/* header */
+.site-header-outer {
+  padding: 5rem 0;
+}
+
 .site-header {
   display: flex;
   justify-content: space-between;
+  border: 1px solid var(--barbie-pink);
+  border-radius: 3rem;
+}
+
+.header__icon,
+.header__icon--cart .icon {
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.cart-count-bubble {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  height: 2rem;
+  width: 2rem;
+  left: 5px;
+  bottom: 13px;
+}
+
+.site-header .header__menu-item,
+.site-header .header__active-menu-item {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-header details[open] > .header__menu-item {
+  text-decoration: none;
+  color: var(--barbie-pink);
+}
+
+.header__menu-item {
+  padding: 1.2rem 4rem;
+}
+
+.site-header summary .icon-caret {
+  color: var(--barbie-pink);
+  height: 0.7rem;
+}
+
+.site-header .header__menu-item:hover span {
+  transition: color 0.2s ease-in-out;
+}
+
+.site-header .header__menu-item:hover span {
+  text-decoration: none;
+  color: var(--barbie-pink);
+}
+
+.site-header .header__submenu.list-menu {
+  background: var(--deep-charcoal);
+  width: 30rem;
+  padding: 2rem 0;
+}
+
+.site-header .header__submenu .header__menu-item {
+  font-size: 1.7rem;
+  padding: 1.5rem 4rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.site-header .header__submenu .header__menu-item:hover {
+  text-decoration: none;
+  color: var(--barbie-pink);
 }
