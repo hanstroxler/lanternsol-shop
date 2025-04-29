@@ -14,7 +14,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "background_color": "#c17171",
+        "background_color": "#1e1e1e",
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
