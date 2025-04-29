@@ -34,12 +34,27 @@
           "settings": {
             "hero_product_image": "shopify://shop_images/hero-product.png"
           }
+        },
+        "hero_benefits_ihXAYk": {
+          "type": "hero_benefits",
+          "settings": {
+            "hero_benefit_image1": "shopify://shop_images/molecular-structure_1.svg",
+            "hero_benefit_heading1": "High-Quality",
+            "hero_benefit_text1": "Science-Backed Formulas",
+            "hero_benefit_image2": "shopify://shop_images/Group_24.svg",
+            "hero_benefit_heading2": "By healthcare providers",
+            "hero_benefit_text2": "Experts in cardiovascular health",
+            "hero_benefit_image3": "shopify://shop_images/ingredients_1_1.svg",
+            "hero_benefit_heading3": "Premium Ingredients",
+            "hero_benefit_text3": "High Quality, Pure and Potent"
+          }
         }
       },
       "block_order": [
         "hero_text_image_V4KJhR",
         "button_aic7wN",
-        "hero_product_image_PEMYA8"
+        "hero_product_image_PEMYA8",
+        "hero_benefits_ihXAYk"
       ],
       "name": "VitaLuxe hero",
       "settings": {
