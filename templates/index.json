@@ -222,6 +222,54 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_7G7Vmi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NfgVDF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Every Health Journey Needs a Trusted Partner",
+            "heading_size": "h0"
+          }
+        },
+        "text_4UFAK6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe wellness starts with knowledge. That’s why we’re here to empower you with transparent, science-backed information on every product we make. Your health deserves the best.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_fD67GB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more about us",
+            "button_link": "shopify://pages/about",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NfgVDF",
+        "text_4UFAK6",
+        "button_fD67GB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/section-image3.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -229,6 +277,7 @@
     "rich_text",
     "featured_collection",
     "vitaluxe_image_width_text_full_8qANyD",
-    "vitaluxe_image_width_text_full_H4fEcY"
+    "vitaluxe_image_width_text_full_H4fEcY",
+    "image_with_text_7G7Vmi"
   ]
 }
