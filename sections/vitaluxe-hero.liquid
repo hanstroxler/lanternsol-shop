@@ -77,6 +77,27 @@
               {%- endif -%}
             </div>
           </div>
+
+        {%- when 'hero_benefits' -%}
+          <div class="hero-benefits-container" {{ block.shopify_attributes }}>
+            <div class="hero-benefits-block">
+              <img src="{{ block.settings.hero_benefit_image1 | image_url }}" alt="">
+              <span class="hero-benefits-heading">{{ block.settings.hero_benefit_heading1 }}</span>
+              <span class="hero-benefits-text">{{ block.settings.hero_benefit_text1 }}</span>
+            </div>
+
+            <div class="hero-benefits-block">
+              <img src="{{ block.settings.hero_benefit_image2 | image_url }}" alt="">
+              <span class="hero-benefits-heading">{{ block.settings.hero_benefit_heading2 }}</span>
+              <span class="hero-benefits-text">{{ block.settings.hero_benefit_text2 }}</span>
+            </div>
+
+            <div class="hero-benefits-block">
+              <img src="{{ block.settings.hero_benefit_image3 | image_url }}" alt="">
+              <span class="hero-benefits-heading">{{ block.settings.hero_benefit_heading3 }}</span>
+              <span class="hero-benefits-text">{{ block.settings.hero_benefit_text3 }}</span>
+            </div>
+          </div>
       {% endcase %}
     {% endfor %}
   </div>
@@ -165,6 +186,75 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "hero_benefits",
+      "name": "Hero benefits",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Benefit block 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_benefit_image1",
+          "label": "Benefit Image 1"
+        },
+        {
+          "type": "text",
+          "id": "hero_benefit_heading1",
+          "label": "Benefit heading 1",
+          "default": "Benefit heading 1"
+        },
+        {
+          "type": "text",
+          "id": "hero_benefit_text1",
+          "label": "Benefit text 1",
+          "default": "Benefit text 1"
+        },
+        {
+          "type": "header",
+          "content": "Benefit block 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_benefit_image2",
+          "label": "Benefit Image 2"
+        },
+        {
+          "type": "text",
+          "id": "hero_benefit_heading2",
+          "label": "Benefit heading 2",
+          "default": "Benefit heading 2"
+        },
+        {
+          "type": "text",
+          "id": "hero_benefit_text2",
+          "label": "Benefit text 2",
+          "default": "Benefit text 2"
+        },
+        {
+          "type": "header",
+          "content": "Benefit block 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_benefit_image3",
+          "label": "Benefit Image 3"
+        },
+        {
+          "type": "text",
+          "id": "hero_benefit_heading3",
+          "label": "Benefit heading 3",
+          "default": "Benefit heading 3"
+        },
+        {
+          "type": "text",
+          "id": "hero_benefit_text3",
+          "label": "Benefit text 3",
+          "default": "Benefit text 3"
         }
       ]
     }

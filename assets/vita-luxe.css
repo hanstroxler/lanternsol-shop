@@ -181,6 +181,44 @@
   color: var(--deep-charcoal);
 }
 
+.hero-benefits-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -5rem;
+  padding-bottom: 5rem;
+}
+
+.hero-benefits-block {
+  position: relative;
+  padding-left: 6.5rem;
+}
+
+.hero-benefits-block img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.hero-benefits-heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.hero-benefits-text {
+  font-weight: 300;
+}
+
+.hero-benefits-heading,
+.hero-benefits-text {
+  display: block;
+  color: var(--white);
+}
+
 /* index featured products */
 .index-page .product-grid {
   justify-content: space-between;
