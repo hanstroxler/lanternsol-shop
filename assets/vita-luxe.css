@@ -53,6 +53,10 @@
   padding: 5rem 0;
 }
 
+.menu-drawer-container .header__icon .icon {
+  stroke: var(--barbie-pink);
+}
+
 .site-header {
   display: flex;
   justify-content: space-between;
